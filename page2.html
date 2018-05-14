@@ -8,20 +8,89 @@
 	<title>Linux Reference Guide </title>
 </head>
 <body>
+ <nav><a href="index.html" target = "_self">Back to Home Page</a>
+
 <center>
 	<h1>Welcome to the Linux Reference Guide</h1>
 </center>
 	<p>Here are several Linux commands and their definitions.</p>
-	<li>$ uname -a: shows what version of UNIX the computer is running </li>
- 	<li>$ passwd: changes the password for the account being used </li>
+	<li>$ uname: Prints certain system information. </br> With no OPTION, same as -s.</br>
+       -a, --all</br>     
+              print all information, in the following order, except omit -p and -i if unknown:</br>
+
+       -s, --kernel-name</br>     
+              print the kernel name</br>
+
+       -n, --nodename</br>     
+              print the network node hostname</br>
+
+       -r, --kernel-release</br>     
+              print the kernel release</br>
+
+       -v, --kernel-version</br>     
+              print the kernel version</br>
+
+       -m, --machine</br>     
+              print the machine hardware name</br>
+
+       -p, --processor</br>     
+              print the processor type (non-portable)</br>
+
+       -i, --hardware-platform</br>     
+              print the hardware platform (non-portable)</br>
+
+       -o, --operating-system</br>     
+              print the operating system</br>
+
+       --help display this help and exit</br>     
+
+       --version</br>     
+              output version information and exit </li>
+ 	<li>$ passwd: Changes passwords for user accounts. A normal user may only change the password for
+       his/her own account, while the superuser may change the password for any account.  passwd also changes the
+       account or associated password validity period.</br>
+   Password Changes</br>
+       The user is first prompted for his/her old password, if one is present. This password is then encrypted and
+       compared against the stored password. The user has only one chance to enter the correct password. The
+       superuser is permitted to bypass this step so that forgotten passwords may be changed. After the password has been entered, password aging information is checked to see if the user is permitted
+       to change the password at this time. If not, passwd refuses to change the password and exits. The user is then prompted twice for a replacement password. The second entry is compared against the first
+       and both are required to match in order for the password to be changed. Then, the password is tested for complexity. As a general guideline, passwords should consist of 6 to 8
+       characters including one or more characters from lower case alphabetics, digits 0 through 9, and punctuation marks. Care must be taken not to include the system default erase or kill characters.  passwd will reject any
+       password which is not suitably complex.</li>
+
 	<li>$ man ___: accesses the built-in manual for commands and file formats</li>
-	<li>$ top: displays the running processes</li>
+	<li>$ top: Provides a dynamic real-time view of a running system.  It can display system summary information as well as a list of processes or threads currently being managed by the Linux kernel.  The types  of
+       system  summary  information  shown and the types, order and size of information displayed for processes are
+       all user configurable and that configuration can be made persistent across restarts.</li>
 	<li>$ ls: shows the list directory contents</li>
 	<li>$ cd: changes the directory</li>
 	<li>$ pwd: prints the working directory (where you are right then)</li>
-	<li>$ cat: displays all of the file code</li>
-	<li>$ mkdir: makes a new directory</li>
+	<li>$ cat: Concatenate FILE(s) to standard output.</br>
+ With no FILE, or when FILE is -, read standard input.</br>
+       -A, --show-all</br>
+              equivalent to -vET</br>
+       -b, --number-nonblank</br>
+              number nonempty output lines, overrides -n</br>
+       -e     equivalent to -vE</br>
+       -E, --show-ends</br>
+              display $ at end of each line</br>
+       -n, --number</br>
+              number all output lines</br>
+       -s, --squeeze-blank</br>
+              suppress repeated empty output lines</br>=
+       -t     equivalent to -vT</br>
+       -T, --show-tabs</br>
+              display TAB characters as ^I</br>
+       -u     (ignored)</br>
+       -v, --show-nonprinting</br>
+              use ^ and M- notation, except for LFD and TAB</br>
+       --help display this help and exit</br>
+       --version</br>
+              output version information and exit</br></li>
 
+	<li>$ mkdir: makes a new directory</li>
+        <li>$ nano: creates a new script or opens an existing one that has been named</li>
+        <li>$ reboot: reboot immediately</li>
 
 
 
